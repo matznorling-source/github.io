@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3f73d2aa8d31e989f01300ca3182504a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3f73d2aa8d31e989f01300ca3182504a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3f73d2aa8d31e989f01300ca3182504a = L.map(
+                "map_3f73d2aa8d31e989f01300ca3182504a",
+                {
+                    center: [59.6651020663352, 17.879712254955077],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_3f73d2aa8d31e989f01300ca3182504a);
+
+            
+
+        
+    
+            var tile_layer_db8ea4510c4938be1e66688479bcc430 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=s\u0026x={x}\u0026y={y}\u0026z={z}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_db8ea4510c4938be1e66688479bcc430.addTo(map_3f73d2aa8d31e989f01300ca3182504a);
+        
+    
+            var tile_layer_0cf48a12d7a5003a6457bec72dbf2fae = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0cf48a12d7a5003a6457bec72dbf2fae.addTo(map_3f73d2aa8d31e989f01300ca3182504a);
+        
+    
+            var tile_layer_50b32839d778fbed57ff4e0cefc1d248 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=p\u0026x={x}\u0026y={y}\u0026z={z}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Google",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_50b32839d778fbed57ff4e0cefc1d248.addTo(map_3f73d2aa8d31e989f01300ca3182504a);
+        
+    
+            var feature_group_0b8c334d985d467950758917c91e7479 = L.featureGroup(
+                {
+}
+            );
+        
+    
+        function geo_json_27d742cad9c0dfb5a167047256bbebb6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#4CAF50", "fillOpacity": 0.4, "weight": 1};
+            }
+        }
+
+        function geo_json_27d742cad9c0dfb5a167047256bbebb6_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_27d742cad9c0dfb5a167047256bbebb6 = L.geoJson(null, {
+                onEachFeature: geo_json_27d742cad9c0dfb5a167047256bbebb6_onEachFeature,
+            
+                style: geo_json_27d742cad9c0dfb5a167047256bbebb6_styler,
+            ...{
+}
+        });
+
+        function geo_json_27d742cad9c0dfb5a167047256bbebb6_add (data) {
+            geo_json_27d742cad9c0dfb5a167047256bbebb6
+                .addData(data);
+        }
+            geo_json_27d742cad9c0dfb5a167047256bbebb6_add({"features": [{"geometry": {"coordinates": [[[17.8244827296507, 59.625522234851736], [17.825002966939135, 59.625540982332105], [17.825573230687866, 59.62553452139372], [17.82614397937427, 59.62543418778578], [17.826565487911097, 59.625247004364795], [17.826630456534037, 59.625088231951544], [17.826546245483826, 59.624831780973004], [17.826490806917462, 59.624524822169754], [17.82635631406227, 59.62434412325521], [17.82610763275462, 59.624192156134875], [17.825838038446214, 59.623949900321584], [17.825617965805176, 59.62377991817075], [17.825497360892093, 59.62367144517324], [17.82529839274804, 59.62355564683071], [17.824999248203678, 59.62351553328157], [17.82463539325323, 59.62358364504626], [17.824341321819443, 59.62393707231767], [17.824147256565123, 59.62424730807894], [17.82401030312579, 59.62453956812844], [17.82390219821051, 59.62476687926415], [17.82389401211022, 59.62496905163119], [17.823971491156435, 59.62514606611312], [17.8241630910195, 59.62530879197531], [17.82441874883447, 59.62548965543557], [17.824454237193905, 59.62551858628974], [17.824454237193905, 59.62551858628974], [17.8244827296507, 59.625522234851736]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_03194bd892627ec17902d9eac2a01158 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_81092108c3fa858295e8c84bf18b7517 = $(`<div id="html_81092108c3fa858295e8c84bf18b7517" style="width: 100.0%; height: 100.0%;"><b>id</b>: nan<br><b>namn</b>: None<br><b>beskrivning</b>: None<br><b>web_lank</b>: None<br></div>`)[0];
+                popup_03194bd892627ec17902d9eac2a01158.setContent(html_81092108c3fa858295e8c84bf18b7517);
+            
+        
+
+        geo_json_27d742cad9c0dfb5a167047256bbebb6.bindPopup(popup_03194bd892627ec17902d9eac2a01158)
+        ;
+
+        
+    
+    
+            geo_json_27d742cad9c0dfb5a167047256bbebb6.addTo(feature_group_0b8c334d985d467950758917c91e7479);
+        
+    
+        function geo_json_ac338eb159632cfa7bf51e7821dfef34_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#4CAF50", "fillOpacity": 0.4, "weight": 1};
+            }
+        }
+
+        function geo_json_ac338eb159632cfa7bf51e7821dfef34_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_ac338eb159632cfa7bf51e7821dfef34 = L.geoJson(null, {
+                onEachFeature: geo_json_ac338eb159632cfa7bf51e7821dfef34_onEachFeature,
+            
+                style: geo_json_ac338eb159632cfa7bf51e7821dfef34_styler,
+            ...{
+}
+        });
+
+        function geo_json_ac338eb159632cfa7bf51e7821dfef34_add (data) {
+            geo_json_ac338eb159632cfa7bf51e7821dfef34
+                .addData(data);
+        }
+            geo_json_ac338eb159632cfa7bf51e7821dfef34_add({"features": [{"geometry": {"coordinates": [[[17.721886985911134, 59.61631686622766], [17.722085927553444, 59.61638769161429], [17.722257513870733, 59.61631945702215], [17.72202662541948, 59.616234122418035], [17.721886985911134, 59.61631686622766], [17.721886985911134, 59.61631686622766]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f236fb1bf0dddb962451576526f3b191 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_73d729a4e4f82aee9af54f171f052f3d = $(`<div id="html_73d729a4e4f82aee9af54f171f052f3d" style="width: 100.0%; height: 100.0%;"><b>id</b>: 2.0<br><b>namn</b>: Stadsodling Drakegården<br><b>beskrivning</b>: Klimatsmart mat<br><b>web_lank</b>: <a href='https://sigtuna.naturskyddsforeningen.se/mat/' target='_blank'>Öppna länk</a><br></div>`)[0];
+                popup_f236fb1bf0dddb962451576526f3b191.setContent(html_73d729a4e4f82aee9af54f171f052f3d);
+            
+        
+
+        geo_json_ac338eb159632cfa7bf51e7821dfef34.bindPopup(popup_f236fb1bf0dddb962451576526f3b191)
+        ;
+
+        
+    
+    
+            geo_json_ac338eb159632cfa7bf51e7821dfef34.addTo(feature_group_0b8c334d985d467950758917c91e7479);
+        
+    
+        function geo_json_10274ae9b60432a93a456de354a8b566_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#4CAF50", "fillOpacity": 0.4, "weight": 1};
+            }
+        }
+
+        function geo_json_10274ae9b60432a93a456de354a8b566_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_10274ae9b60432a93a456de354a8b566 = L.geoJson(null, {
+                onEachFeature: geo_json_10274ae9b60432a93a456de354a8b566_onEachFeature,
+            
+                style: geo_json_10274ae9b60432a93a456de354a8b566_styler,
+            ...{
+}
+        });
+
+        function geo_json_10274ae9b60432a93a456de354a8b566_add (data) {
+            geo_json_10274ae9b60432a93a456de354a8b566
+                .addData(data);
+        }
+            geo_json_10274ae9b60432a93a456de354a8b566_add({"features": [{"geometry": {"coordinates": [[[17.974207929591227, 59.66988481279293], [17.974301211063484, 59.669830058645566], [17.974337345594687, 59.669775293268316], [17.974376492364776, 59.66971444264117], [17.97454492425251, 59.669714475421216], [17.974659203541258, 59.6697327550221], [17.97470730748206, 59.66975862907007], [17.974653111166838, 59.66983469145841], [17.974586915927546, 59.6698681507076], [17.974436519200705, 59.6698818146081], [17.97434628622028, 59.66988331845633], [17.97434628622028, 59.66988331845633], [17.974207929591227, 59.66988481279293]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_57a6b6973972b5582fe49aeb53ff2bc0 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_9be28d2056eb0882948ef141b5c19d09 = $(`<div id="html_9be28d2056eb0882948ef141b5c19d09" style="width: 100.0%; height: 100.0%;"><b>id</b>: 2.0<br><b>namn</b>: Arlanda motorkrossbana<br><b>beskrivning</b>: sandbädd för bin<br><b>web_lank</b>: NULLhttps://sigtuna.naturskyddsforeningen.se/styrande-dokument-2/<br></div>`)[0];
+                popup_57a6b6973972b5582fe49aeb53ff2bc0.setContent(html_9be28d2056eb0882948ef141b5c19d09);
+            
+        
+
+        geo_json_10274ae9b60432a93a456de354a8b566.bindPopup(popup_57a6b6973972b5582fe49aeb53ff2bc0)
+        ;
+
+        
+    
+    
+            geo_json_10274ae9b60432a93a456de354a8b566.addTo(feature_group_0b8c334d985d467950758917c91e7479);
+        
+    
+        function geo_json_d91ea8d9feced6674288bf0b9c3aadba_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#4CAF50", "fillOpacity": 0.4, "weight": 1};
+            }
+        }
+
+        function geo_json_d91ea8d9feced6674288bf0b9c3aadba_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_d91ea8d9feced6674288bf0b9c3aadba = L.geoJson(null, {
+                onEachFeature: geo_json_d91ea8d9feced6674288bf0b9c3aadba_onEachFeature,
+            
+                style: geo_json_d91ea8d9feced6674288bf0b9c3aadba_styler,
+            ...{
+}
+        });
+
+        function geo_json_d91ea8d9feced6674288bf0b9c3aadba_add (data) {
+            geo_json_d91ea8d9feced6674288bf0b9c3aadba
+                .addData(data);
+        }
+            geo_json_d91ea8d9feced6674288bf0b9c3aadba_add({"features": [{"geometry": {"coordinates": [[[18.008240150893222, 59.716162341332236], [18.008198671017627, 59.71616805870877], [18.00817415586747, 59.71615377328467], [18.00819111779354, 59.71612234093336], [18.0082194002127, 59.716121386703065], [18.008262770467773, 59.71613567093405], [18.008253348542087, 59.71615853064975], [18.008253348542087, 59.71615853064975], [18.008240150893222, 59.716162341332236]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f8df56135b880d055fc0041b489ad317 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_13de2d98d3d400dcd49f18329fbde5cb = $(`<div id="html_13de2d98d3d400dcd49f18329fbde5cb" style="width: 100.0%; height: 100.0%;"><b>id</b>: 3.0<br><b>namn</b>: Vidbo sandbädd<br><b>beskrivning</b>: Hem för olika bin<br><b>web_lank</b>: <a href='https://sigtuna.naturskyddsforeningen.se/styrande-dokument-2/' target='_blank'>Öppna länk</a><br></div>`)[0];
+                popup_f8df56135b880d055fc0041b489ad317.setContent(html_13de2d98d3d400dcd49f18329fbde5cb);
+            
+        
+
+        geo_json_d91ea8d9feced6674288bf0b9c3aadba.bindPopup(popup_f8df56135b880d055fc0041b489ad317)
+        ;
+
+        
+    
+    
+            geo_json_d91ea8d9feced6674288bf0b9c3aadba.addTo(feature_group_0b8c334d985d467950758917c91e7479);
+        
+    
+        function geo_json_7e76ae130ad1e254ffe44d12beb62561_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#4CAF50", "fillOpacity": 0.4, "weight": 1};
+            }
+        }
+
+        function geo_json_7e76ae130ad1e254ffe44d12beb62561_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_7e76ae130ad1e254ffe44d12beb62561 = L.geoJson(null, {
+                onEachFeature: geo_json_7e76ae130ad1e254ffe44d12beb62561_onEachFeature,
+            
+                style: geo_json_7e76ae130ad1e254ffe44d12beb62561_styler,
+            ...{
+}
+        });
+
+        function geo_json_7e76ae130ad1e254ffe44d12beb62561_add (data) {
+            geo_json_7e76ae130ad1e254ffe44d12beb62561
+                .addData(data);
+        }
+            geo_json_7e76ae130ad1e254ffe44d12beb62561_add({"features": [{"geometry": {"coordinates": [[[18.01070492905036, 59.717456561308694], [18.011662720169095, 59.71720883929906], [18.012469678055577, 59.71702970206252], [18.013201206771097, 59.71685437731905], [18.013759281478738, 59.716736214584614], [18.01458140713533, 59.71680089340184], [18.01526030166942, 59.71701416807712], [18.015675197992937, 59.71717032320781], [18.016278702231812, 59.71742170011584], [18.016640842035816, 59.717638816364534], [18.01714633364573, 59.717935919884965], [18.0175688565622, 59.71821398330711], [18.01774229196285, 59.718133953086856], [18.017282056463703, 59.71785589518642], [18.01696517216478, 59.71765401428723], [18.01650498159977, 59.71744072114347], [18.016014602248827, 59.717174092118505], [18.015660056475156, 59.71704840970588], [18.014852900766556, 59.71674371517858], [18.014370147315827, 59.71661804371167], [18.013796946890448, 59.71662572487891], [18.013201158751126, 59.71673246201057], [18.012688335365016, 59.71685061801012], [18.0119794294185, 59.71702212798249], [18.011353476152884, 59.71717838756672], [18.01084817310191, 59.71726986675001], [18.010606835211483, 59.71731941455226], [18.010606835211483, 59.71731941455226], [18.010606835211483, 59.71731941455226], [18.01070492905036, 59.717456561308694]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_fa9fcc96867f0054ea40bf7266d7e817 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_53cdd2bd9b82aaae6be61456dbcdc6a0 = $(`<div id="html_53cdd2bd9b82aaae6be61456dbcdc6a0" style="width: 100.0%; height: 100.0%;"><b>id</b>: 4.0<br><b>namn</b>: Vidbo blommande vägkanter<br><b>beskrivning</b>: Växter krin vägen<br><b>web_lank</b>: <a href='https://sigtuna.naturskyddsforeningen.se/skylt-10/' target='_blank'>Öppna länk</a><br></div>`)[0];
+                popup_fa9fcc96867f0054ea40bf7266d7e817.setContent(html_53cdd2bd9b82aaae6be61456dbcdc6a0);
+            
+        
+
+        geo_json_7e76ae130ad1e254ffe44d12beb62561.bindPopup(popup_fa9fcc96867f0054ea40bf7266d7e817)
+        ;
+
+        
+    
+    
+            geo_json_7e76ae130ad1e254ffe44d12beb62561.addTo(feature_group_0b8c334d985d467950758917c91e7479);
+        
+    
+        function geo_json_7795eb28923edfaab708f8eab205f4b5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#4CAF50", "fillOpacity": 0.4, "weight": 1};
+            }
+        }
+
+        function geo_json_7795eb28923edfaab708f8eab205f4b5_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_7795eb28923edfaab708f8eab205f4b5 = L.geoJson(null, {
+                onEachFeature: geo_json_7795eb28923edfaab708f8eab205f4b5_onEachFeature,
+            
+                style: geo_json_7795eb28923edfaab708f8eab205f4b5_styler,
+            ...{
+}
+        });
+
+        function geo_json_7795eb28923edfaab708f8eab205f4b5_add (data) {
+            geo_json_7795eb28923edfaab708f8eab205f4b5
+                .addData(data);
+        }
+            geo_json_7795eb28923edfaab708f8eab205f4b5_add({"features": [{"geometry": {"coordinates": [[[17.727376258750112, 59.651617236915165], [17.735556320175352, 59.65288363292125], [17.738057264018693, 59.64880442543287], [17.741223167249192, 59.64429977167771], [17.74153193501515, 59.643294562911414], [17.73750820108741, 59.6420064398594], [17.73546730845798, 59.64124035589393], [17.733611214130608, 59.63995646654001], [17.728830670222393, 59.64302508328926], [17.7297283450003, 59.64369748159158], [17.72845245492389, 59.64512737492648], [17.72909165287276, 59.647993753077536], [17.728411326514966, 59.65021733599873], [17.727857770207635, 59.65164871603425], [17.727857770207635, 59.65164871603425], [17.727376258750112, 59.651617236915165]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_7cbc5cb9379f3a5305196d17f5db3ddd = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_d0aa14dc6d93f48bcb625cc37d04bd8c = $(`<div id="html_d0aa14dc6d93f48bcb625cc37d04bd8c" style="width: 100.0%; height: 100.0%;"><b>id</b>: 5.0<br><b>namn</b>: Pollinationsprojektet på Sigtuna golfbana<br><b>beskrivning</b>: Ängar, bon, skyltar<br><b>web_lank</b>: <a href='https://kretswebb-naturskyddsforeningen.cdn.triggerfish.cloud/uploads/sites/101/2025/10/Hemsidetext-for-Pollinationsprojektet-pa-Sigtuna-golfbana.pdf' target='_blank'>Öppna länk</a><br></div>`)[0];
+                popup_7cbc5cb9379f3a5305196d17f5db3ddd.setContent(html_d0aa14dc6d93f48bcb625cc37d04bd8c);
+            
+        
+
+        geo_json_7795eb28923edfaab708f8eab205f4b5.bindPopup(popup_7cbc5cb9379f3a5305196d17f5db3ddd)
+        ;
+
+        
+    
+    
+            geo_json_7795eb28923edfaab708f8eab205f4b5.addTo(feature_group_0b8c334d985d467950758917c91e7479);
+        
+    
+            feature_group_0b8c334d985d467950758917c91e7479.addTo(map_3f73d2aa8d31e989f01300ca3182504a);
+        
+    
+            var feature_group_037bc932f53ff38dd5286fe3477596ee = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_bcbe37cccb3f25b05ee48899d6ca01d3 = L.marker(
+                [59.62880688244242, 17.843339437473404],
+                {
+}
+            ).addTo(feature_group_037bc932f53ff38dd5286fe3477596ee);
+        
+    
+            var div_icon_ef8b26779a4a18f9425a7e10096aea9b = L.divIcon({
+  "html": "\n    \u003cdiv style=\"\n        width:32px;\n        height:32px;\n        display:flex;\n        align-items:center;\n        justify-content:center;\n        pointer-events:auto;\n    \"\u003e\n      \u003csvg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\"\u003e\n        \u003ccircle cx=\"16\" cy=\"16\" r=\"14\"\n                fill=\"#1E88E5\" stroke=\"white\" stroke-width=\"2\"/\u003e\n        \u003c!-- stiliserat bi --\u003e\n        \u003cellipse cx=\"16\" cy=\"17\" rx=\"6\" ry=\"4\" fill=\"white\"/\u003e\n        \u003cline x1=\"13\" y1=\"14\" x2=\"13\" y2=\"20\" stroke=\"#1E88E5\" stroke-width=\"1\"/\u003e\n        \u003cline x1=\"16\" y1=\"14\" x2=\"16\" y2=\"20\" stroke=\"#1E88E5\" stroke-width=\"1\"/\u003e\n        \u003cline x1=\"19\" y1=\"14\" x2=\"19\" y2=\"20\" stroke=\"#1E88E5\" stroke-width=\"1\"/\u003e\n      \u003c/svg\u003e\n    \u003c/div\u003e\n    ",
+  "iconSize": [32, 32],
+  "iconAnchor": [16, 16],
+  "className": "empty",
+});
+        
+    
+        var popup_f2471a9586f4fc179e6a8b2fcbb22efe = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_2a0bb89b604af2b9889f0e0d47c8684f = $(`<div id="html_2a0bb89b604af2b9889f0e0d47c8684f" style="width: 100.0%; height: 100.0%;"><b>Biologisk mångfald</b>: Huvudkontor<br><b>Information</b>: Hus <br><b>websida</b>: <a href='https://sigtuna.naturskyddsforeningen.se/' target='_blank'>Öppna länk</a><br></div>`)[0];
+                popup_f2471a9586f4fc179e6a8b2fcbb22efe.setContent(html_2a0bb89b604af2b9889f0e0d47c8684f);
+            
+        
+
+        marker_bcbe37cccb3f25b05ee48899d6ca01d3.bindPopup(popup_f2471a9586f4fc179e6a8b2fcbb22efe)
+        ;
+
+        
+    
+    
+                marker_bcbe37cccb3f25b05ee48899d6ca01d3.setIcon(div_icon_ef8b26779a4a18f9425a7e10096aea9b);
+            
+    
+            var marker_d10bfd0e2b21062a38bd3e85d0e3cb79 = L.marker(
+                [59.576804482932275, 17.91374255106166],
+                {
+}
+            ).addTo(feature_group_037bc932f53ff38dd5286fe3477596ee);
+        
+    
+        var popup_d4590abf92e65799d16dd2acdf524b5d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_f0be110499f5a2bace4c870609b8f9e6 = $(`<div id="html_f0be110499f5a2bace4c870609b8f9e6" style="width: 100.0%; height: 100.0%;"><b>Biologisk mångfald</b>: Fysingen<br><b>Information</b>: Ströms mad<br><b>websida</b>: <a href='https://sigtuna.naturskyddsforeningen.se/biologisk-mangfald/' target='_blank'>Öppna länk</a><br></div>`)[0];
+                popup_d4590abf92e65799d16dd2acdf524b5d.setContent(html_f0be110499f5a2bace4c870609b8f9e6);
+            
+        
+
+        marker_d10bfd0e2b21062a38bd3e85d0e3cb79.bindPopup(popup_d4590abf92e65799d16dd2acdf524b5d)
+        ;
+
+        
+    
+    
+                marker_d10bfd0e2b21062a38bd3e85d0e3cb79.setIcon(div_icon_ef8b26779a4a18f9425a7e10096aea9b);
+            
+    
+            feature_group_037bc932f53ff38dd5286fe3477596ee.addTo(map_3f73d2aa8d31e989f01300ca3182504a);
+        
+    
+            var feature_group_1a97411901cd436c3b3c121b468fb56f = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_b1af544794f14c10b2ee60e3075ac5de = L.circleMarker(
+                [59.62880688244242, 17.843339437473404],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1a97411901cd436c3b3c121b468fb56f);
+        
+    
+        var popup_07c506656fe3ce214e158f252cf2236f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0a80aac87f8679f2bbd7b2f2dc162d65 = $(`<div id="html_0a80aac87f8679f2bbd7b2f2dc162d65" style="width: 100.0%; height: 100.0%;"><b>Biologisk mångfald</b>: Huvudkontor<br><b>Information</b>: Hus <br><b>websida</b>: https://sigtuna.naturskyddsforeningen.se/</div>`)[0];
+                popup_07c506656fe3ce214e158f252cf2236f.setContent(html_0a80aac87f8679f2bbd7b2f2dc162d65);
+            
+        
+
+        circle_marker_b1af544794f14c10b2ee60e3075ac5de.bindPopup(popup_07c506656fe3ce214e158f252cf2236f)
+        ;
+
+        
+    
+    
+            var circle_marker_c3818c89808f08880bf3917442dc03fd = L.circleMarker(
+                [59.576804482932275, 17.91374255106166],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1a97411901cd436c3b3c121b468fb56f);
+        
+    
+        var popup_37fdf9d3119dc3429e9bee68763e4913 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_87c6f5555f4ddda3b9047cce3e3b163f = $(`<div id="html_87c6f5555f4ddda3b9047cce3e3b163f" style="width: 100.0%; height: 100.0%;"><b>Biologisk mångfald</b>: Fysingen<br><b>Information</b>: Ströms mad<br><b>websida</b>: https://sigtuna.naturskyddsforeningen.se/biologisk-mangfald/</div>`)[0];
+                popup_37fdf9d3119dc3429e9bee68763e4913.setContent(html_87c6f5555f4ddda3b9047cce3e3b163f);
+            
+        
+
+        circle_marker_c3818c89808f08880bf3917442dc03fd.bindPopup(popup_37fdf9d3119dc3429e9bee68763e4913)
+        ;
+
+        
+    
+    
+            feature_group_1a97411901cd436c3b3c121b468fb56f.addTo(map_3f73d2aa8d31e989f01300ca3182504a);
+        
+    
+            var heat_map_2407930eaa8793755a3b69205da1b680 = L.heatLayer(
+                [[59.62880688244242, 17.843339437473404], [59.576804482932275, 17.91374255106166]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 13,
+  "radius": 20,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_2407930eaa8793755a3b69205da1b680.addTo(map_3f73d2aa8d31e989f01300ca3182504a);
+        
+    
+            var feature_group_4ece9bc24be12002659236ec75295a3f = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_4341ceb8b8603ad36e42ab51c1f389bf = L.circleMarker(
+                [59.62880688244242, 17.843339437473404],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_4ece9bc24be12002659236ec75295a3f);
+        
+    
+        var popup_8c1a534918d898e23c525ac18b992754 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_71c65b9046c79fee74f667683357c992 = $(`<div id="html_71c65b9046c79fee74f667683357c992" style="width: 100.0%; height: 100.0%;"><b>Biologisk mångfald</b>: Huvudkontor<br><b>Information</b>: Hus <br><b>websida</b>: https://sigtuna.naturskyddsforeningen.se/</div>`)[0];
+                popup_8c1a534918d898e23c525ac18b992754.setContent(html_71c65b9046c79fee74f667683357c992);
+            
+        
+
+        circle_marker_4341ceb8b8603ad36e42ab51c1f389bf.bindPopup(popup_8c1a534918d898e23c525ac18b992754)
+        ;
+
+        
+    
+    
+            var circle_marker_d3a65928b3565df78e279b24697ce026 = L.circleMarker(
+                [59.576804482932275, 17.91374255106166],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_4ece9bc24be12002659236ec75295a3f);
+        
+    
+        var popup_e38fd4445524d5e4a80c0e16d7697e25 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c3d83f5db250feba5d5fdf14110cace1 = $(`<div id="html_c3d83f5db250feba5d5fdf14110cace1" style="width: 100.0%; height: 100.0%;"><b>Biologisk mångfald</b>: Fysingen<br><b>Information</b>: Ströms mad<br><b>websida</b>: https://sigtuna.naturskyddsforeningen.se/biologisk-mangfald/</div>`)[0];
+                popup_e38fd4445524d5e4a80c0e16d7697e25.setContent(html_c3d83f5db250feba5d5fdf14110cace1);
+            
+        
+
+        circle_marker_d3a65928b3565df78e279b24697ce026.bindPopup(popup_e38fd4445524d5e4a80c0e16d7697e25)
+        ;
+
+        
+    
+    
+            feature_group_4ece9bc24be12002659236ec75295a3f.addTo(map_3f73d2aa8d31e989f01300ca3182504a);
+        
+    
+            var feature_group_5de4a4ab34bfb4f5b8b98e86d24c6c8a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_913756059d057a5a524fc9966c78fd4b = L.circleMarker(
+                [59.62880688244242, 17.843339437473404],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5de4a4ab34bfb4f5b8b98e86d24c6c8a);
+        
+    
+        var popup_af83c7ecd40999ab8ed2bc2887b95b2b = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_8ce94a713d74133b5b465f158b78857f = $(`<div id="html_8ce94a713d74133b5b465f158b78857f" style="width: 100.0%; height: 100.0%;"><b>Biologisk mångfald</b>: Huvudkontor<br><b>Information</b>: Hus <br><b>websida</b>: <a href='https://sigtuna.naturskyddsforeningen.se/' target='_blank'>Öppna länk</a><br></div>`)[0];
+                popup_af83c7ecd40999ab8ed2bc2887b95b2b.setContent(html_8ce94a713d74133b5b465f158b78857f);
+            
+        
+
+        circle_marker_913756059d057a5a524fc9966c78fd4b.bindPopup(popup_af83c7ecd40999ab8ed2bc2887b95b2b)
+        ;
+
+        
+    
+    
+            var circle_marker_4c459e44c7886243ad7ee473cb1c9069 = L.circleMarker(
+                [59.576804482932275, 17.91374255106166],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5de4a4ab34bfb4f5b8b98e86d24c6c8a);
+        
+    
+        var popup_e43088b4ff85a79ae8e2f1c919229669 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_8cfab90ef075769d137e3ae78bdc9503 = $(`<div id="html_8cfab90ef075769d137e3ae78bdc9503" style="width: 100.0%; height: 100.0%;"><b>Biologisk mångfald</b>: Fysingen<br><b>Information</b>: Ströms mad<br><b>websida</b>: <a href='https://sigtuna.naturskyddsforeningen.se/biologisk-mangfald/' target='_blank'>Öppna länk</a><br></div>`)[0];
+                popup_e43088b4ff85a79ae8e2f1c919229669.setContent(html_8cfab90ef075769d137e3ae78bdc9503);
+            
+        
+
+        circle_marker_4c459e44c7886243ad7ee473cb1c9069.bindPopup(popup_e43088b4ff85a79ae8e2f1c919229669)
+        ;
+
+        
+    
+    
+            feature_group_5de4a4ab34bfb4f5b8b98e86d24c6c8a.addTo(map_3f73d2aa8d31e989f01300ca3182504a);
+        
+    
+            var layer_control_bdb88768f834d911f4b9ecda92b48ef2_layers = {
+                base_layers : {
+                    "Google Satellite" : tile_layer_db8ea4510c4938be1e66688479bcc430,
+                    "Google Hybrid" : tile_layer_0cf48a12d7a5003a6457bec72dbf2fae,
+                    "Google Terrain" : tile_layer_50b32839d778fbed57ff4e0cefc1d248,
+                },
+                overlays :  {
+                    "Polygoner" : feature_group_0b8c334d985d467950758917c91e7479,
+                    "Punkter" : feature_group_5de4a4ab34bfb4f5b8b98e86d24c6c8a,
+                    "Heatmap punkter" : heat_map_2407930eaa8793755a3b69205da1b680,
+                },
+            };
+            let layer_control_bdb88768f834d911f4b9ecda92b48ef2 = L.control.layers(
+                layer_control_bdb88768f834d911f4b9ecda92b48ef2_layers.base_layers,
+                layer_control_bdb88768f834d911f4b9ecda92b48ef2_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_3f73d2aa8d31e989f01300ca3182504a);
+
+        
+</script>
+</html>
